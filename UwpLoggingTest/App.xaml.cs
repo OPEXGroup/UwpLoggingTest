@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using ITCC.Logging.Core;
+using ITCC.Logging.Core.Loggers;
 
 namespace UwpLoggingTest
 {
@@ -30,6 +32,9 @@ namespace UwpLoggingTest
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            Logger.Level = LogLevel.Trace;
+            Logger.RegisterReceiver(new DebugLogger());
         }
 
         /// <summary>

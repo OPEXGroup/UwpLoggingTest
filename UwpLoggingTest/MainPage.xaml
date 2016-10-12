@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Button Name="AsyncButton"
+                HorizontalAlignment="Stretch"
+                Margin="10"
+                Content="Click me!"
+                FontSize="24"
+                Click="AsyncButton_OnClick"></Button>
     </Grid>
 </Page>
